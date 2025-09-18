@@ -8,8 +8,12 @@ import Auth from "./pages/Auth";
 import Chat from "./pages/Chat";
 import Pricing from "./pages/Pricing";
 import NotFound from "./pages/NotFound";
+import axios from 'axios';
 
+
+axios.defaults.baseURL = import.meta.env.VITE_SERVER_URL
 const queryClient = new QueryClient();
+
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
